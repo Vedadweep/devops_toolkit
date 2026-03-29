@@ -2,6 +2,7 @@
 Batch processing utilities.
 Demonstrates: generator patterns, performance awareness, clean interfaces.
 """
+
 from typing import Callable, Iterable, Any, Generator
 import time
 
@@ -19,7 +20,7 @@ class BatchProcessor:
     def batches(self, items: list) -> Generator:
         """Yield successive batches from items list."""
         for i in range(0, len(items), self.batch_size):
-            yield items[i: i + self.batch_size]
+            yield items[i : i + self.batch_size]
 
     def process(self, items: list, func: Callable) -> dict:
         """
@@ -46,7 +47,7 @@ class BatchProcessor:
             "total": len(items),
             "processed": self._processed,
             "errors": self._errors,
-            "elapsed_seconds": elapsed
+            "elapsed_seconds": elapsed,
         }
 
     @property

@@ -2,6 +2,7 @@
 Data validation utilities.
 Demonstrates: defensive programming, clear error messages, edge case handling.
 """
+
 import re
 from dataclasses import dataclass
 from typing import Any
@@ -51,7 +52,9 @@ class DataValidator:
         return ValidationResult(True, [])
 
     @staticmethod
-    def validate_integer_range(value: Any, min_val: int, max_val: int, field_name: str = "Value") -> ValidationResult:
+    def validate_integer_range(
+        value: Any, min_val: int, max_val: int, field_name: str = "Value"
+    ) -> ValidationResult:
         errors = []
         if not isinstance(value, int):
             return ValidationResult(False, [f"{field_name} must be an integer"])

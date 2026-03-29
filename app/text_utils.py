@@ -2,6 +2,7 @@
 Text processing utilities with clean OOP design.
 Demonstrates: encapsulation, single responsibility, testable units.
 """
+
 import re
 from collections import Counter
 from typing import Optional

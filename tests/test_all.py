@@ -6,6 +6,7 @@ from app.performance import BatchProcessor
 
 # ===================== TextSanitizer Tests =====================
 
+
 class TestTextSanitizer:
     def test_remove_special_chars(self):
         assert TextSanitizer.remove_special_chars("Hello, World!") == "Hello World"
@@ -32,6 +33,7 @@ class TestTextSanitizer:
 
 
 # ===================== WordCounter Tests =====================
+
 
 class TestWordCounter:
     def setup_method(self):
@@ -71,6 +73,7 @@ class TestWordCounter:
 
 
 # ===================== DataValidator Tests =====================
+
 
 class TestDataValidator:
     def test_valid_email(self):
@@ -128,6 +131,7 @@ class TestDataValidator:
 
 # ===================== BatchProcessor Tests =====================
 
+
 class TestBatchProcessor:
     def test_basic_processing(self):
         bp = BatchProcessor(batch_size=2)
@@ -138,6 +142,7 @@ class TestBatchProcessor:
 
     def test_error_handling(self):
         bp = BatchProcessor(batch_size=10)
+
         def risky(x):
             if x == 0:
                 raise ZeroDivisionError("Cannot divide by zero")
@@ -170,6 +175,6 @@ class TestBatchProcessor:
 
     def test_elapsed_time_recorded(self):
         bp = BatchProcessor()
-        result = bp.process(list(range(50)), lambda x: x ** 2)
+        result = bp.process(list(range(50)), lambda x: x**2)
         assert "elapsed_seconds" in result
         assert result["elapsed_seconds"] >= 0
