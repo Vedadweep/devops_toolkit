@@ -1,8 +1,8 @@
 import pytest
-from app.text_utils import TextSanitizer, WordCounter
+
 from app.data_validator import DataValidator
 from app.performance import BatchProcessor
-
+from app.text_utils import TextSanitizer, WordCounter
 
 # ===================== TextSanitizer Tests =====================
 

@@ -3,8 +3,8 @@ Batch processing utilities.
 Demonstrates: generator patterns, performance awareness, clean interfaces.
 """
 
-from typing import Callable, Iterable, Any, Generator
 import time
+from typing import Any, Callable, Generator, Iterable
 
 
 class BatchProcessor:
