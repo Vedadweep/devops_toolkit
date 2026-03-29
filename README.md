@@ -2,8 +2,6 @@
 
 A Python utility library built **CI/CD-first**: every commit triggers linting, matrix testing across Python 3.10/3.11/3.12, security scanning, and coverage enforcement — all via GitHub Actions.
 
-![CI](https://github.com/Vedadweep/devops-toolkit/actions/workflows/ci.yml/badge.svg)
-
 ---
 
 ## Purpose
